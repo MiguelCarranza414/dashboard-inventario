@@ -67,6 +67,7 @@ function renderAPU(apus) {
     totalGlobal += total;
     if (cumplimiento > mejor.rate) mejor = { status, rate: cumplimiento };
     if (cumplimiento < peor.rate) peor = { status, rate: cumplimiento };
+    const complianceDeg = cumplimiento * 360;
     const card = document.createElement('div');
     card.className = 'card';
     card.innerHTML = `
@@ -77,16 +78,25 @@ function renderAPU(apus) {
         </div>
         <span class="tag ${cumplimiento >= 0.5 ? 'success' : 'warn'}">${cumplimiento >= 0.5 ? 'On Track' : 'Atención'}</span>
       </div>
-      <div class="bar-group">
-        <div>
-          <div class="bar-label"><span>Si contaron</span><span>${si}</span></div>
-          <div class="bar"><div class="bar-fill" style="width: ${(total ? (si / total) * 100 : 0).toFixed(0)}%"></div></div>
+      <div class="apu-body">
+        <div class="doughnut" style="background: conic-gradient(var(--primary) 0deg ${complianceDeg.toFixed(1)}deg, var(--danger) ${complianceDeg.toFixed(1)}deg 360deg)">
+          <div class="doughnut-center">
+            <div class="doughnut-title">Contratos</div>
+            <div class="doughnut-value">${(total ? (si / total) * 100 : 0).toFixed(0)}%</div>
+            <div class="doughnut-caption">Con contrato</div>
+          </div>
         </div>
-        <div>
-          <div class="bar-label"><span>No contaron</span><span>${no}</span></div>
-          <div class="bar"><div class="bar-fill danger" style="width: ${(total ? (no / total) * 100 : 0).toFixed(0)}%"></div></div>
+        <div class="bar-group">
+          <div>
+            <div class="bar-label"><span>Con contrato</span><span>${si}</span></div>
+            <div class="bar"><div class="bar-fill" style="width: ${(total ? (si / total) * 100 : 0).toFixed(0)}%"></div></div>
+          </div>
+          <div>
+            <div class="bar-label"><span>Sin contrato</span><span>${no}</span></div>
+            <div class="bar"><div class="bar-fill danger" style="width: ${(total ? (no / total) * 100 : 0).toFixed(0)}%"></div></div>
+          </div>
+          <div class="bar-label muted">Total casos: ${total}</div>
         </div>
-        <div class="bar-label muted">Total conteos: ${total}</div>
       </div>
     `;
     selectors.apuGrid.appendChild(card);
