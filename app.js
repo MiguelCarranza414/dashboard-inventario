@@ -81,18 +81,18 @@ function renderAPU(apus) {
       <div class="apu-body">
         <div class="doughnut" style="background: conic-gradient(var(--primary) 0deg ${complianceDeg.toFixed(1)}deg, var(--danger) ${complianceDeg.toFixed(1)}deg 360deg)">
           <div class="doughnut-center">
-            <div class="doughnut-title">Contratos</div>
+            <div class="doughnut-title">Conteos</div>
             <div class="doughnut-value">${(total ? (si / total) * 100 : 0).toFixed(0)}%</div>
-            <div class="doughnut-caption">Con contrato</div>
+            <div class="doughnut-caption">Si Cumplió</div>
           </div>
         </div>
         <div class="bar-group">
           <div>
-            <div class="bar-label"><span>Con contrato</span><span>${si}</span></div>
+            <div class="bar-label"><span>Si cumplió</span><span>${si}</span></div>
             <div class="bar"><div class="bar-fill" style="width: ${(total ? (si / total) * 100 : 0).toFixed(0)}%"></div></div>
           </div>
           <div>
-            <div class="bar-label"><span>Sin contrato</span><span>${no}</span></div>
+            <div class="bar-label"><span>No cumplió</span><span>${no}</span></div>
             <div class="bar"><div class="bar-fill danger" style="width: ${(total ? (no / total) * 100 : 0).toFixed(0)}%"></div></div>
           </div>
           <div class="bar-label muted">Total casos: ${total}</div>
