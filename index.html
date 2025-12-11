@@ -14,7 +14,7 @@
     <div>
       <p class="eyebrow">Panel ejecutivo</p>
       <h1>Monitoreo de Cumplimiento</h1>
-      <p class="subtitle">Visualiza los KPIs de negocio en tiempo real desde el archivo KPI.json</p>
+      <p class="subtitle">Visualiza los KPIs de los conteos diarios en tiempo real desde el archivo KPI.json</p>
     </div>
     <div class="actions">
       <button id="refresh-btn" class="ghost">Recargar datos</button>
@@ -49,13 +49,13 @@
         </div>
 
         <div class="card highlight-card">
-          <div class="label">Código diario mayor</div>
+          <div class="label">Mayor Conteo diario</div>
           <div class="pill green" id="codigo-mayor">--</div>
           <p class="muted">Máximo hallazgo</p>
         </div>
 
         <div class="card highlight-card">
-          <div class="label">Código diario menor</div>
+          <div class="label">Menor conteo diario</div>
           <div class="pill orange" id="codigo-menor">--</div>
           <p class="muted">Mínimo hallazgo</p>
         </div>
@@ -66,9 +66,9 @@
       <div class="panel-header">
         <div>
           <h2>Detalle por APU</h2>
-          <p class="muted">Distribución de casos con y sin contrato por unidad.</p>
+          <p class="muted">Distribución de casos con y sin conteo por APU.</p>
         </div>
-        <div class="chip" id="global-total">Total casos: --</div>
+        <div class="chip" id="global-total">Total de conteos: --</div>
       </div>
       <div id="apu-grid" class="grid apu-grid"></div>
     </section>
