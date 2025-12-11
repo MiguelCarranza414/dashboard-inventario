@@ -1,4 +1,4 @@
-const KPI_JSON_URL = "https://raw.githubusercontent.com/USUARIO/REPO/RAMA/KPI.json";
+const KPI_JSON_URL = "https://raw.githubusercontent.com/MiguelCarranza414/dashboard-inventario/refs/heads/main/KPI.json";
 const selectors = {
   compliance: document.getElementById('global-compliance'),
   noncompliance: document.getElementById('global-noncompliance'),
@@ -101,7 +101,7 @@ function renderAPU(apus) {
     `;
     selectors.apuGrid.appendChild(card);
   });
-  selectors.globalTotal.textContent = `Total casos: ${totalGlobal}`;
+  selectors.globalTotal.textContent = `Total conteos: ${totalGlobal}`;
   renderNarrative(mejor, peor);
 }
 function renderNarrative(mejor, peor) {
@@ -112,7 +112,7 @@ function renderNarrative(mejor, peor) {
   selectors.narrative.innerHTML = `
     <strong>${mejor.status}</strong> lidera el cumplimiento con ${formatPercent(mejor.rate)},
     mientras que <strong>${peor.status}</strong> requiere atención inmediata (${formatPercent(peor.rate)}).
-    Revisa la distribución de contratos para equilibrar el desempeño y prioriza acciones correctivas en las unidades con baja cobertura.
+    Revisa la distribución de los conteos para equilibrar el desempeño y prioriza acciones correctivas en las lineas con baja cobertura.
   `;
 }
 function renderDashboard(data) {
