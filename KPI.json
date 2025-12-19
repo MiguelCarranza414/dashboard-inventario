@@ -1,67 +1,67 @@
 [
-  {
-    "Status": "Global",
-    "Descripcion": "Cumplimiento",
-    "Dato": 0.3074433656957929
-  },
-  {
-    "Status": "Global",
-    "Descripcion": "Incumplimiento",
-    "Dato": 0.6925566343042071
-  },
-  {
-    "Status": "Global",
-    "Descripcion": "C.Diario mayor",
-    "Dato": "XDU"
-  },
-  {
-    "Status": "Global",
-    "Descripcion": "C.Diario menor",
-    "Dato": "CON"
-  },
-  {
-    "Status": "APU1",
-    "Descripcion": "Si Cont. 1",
-    "Dato": 20
-  },
-  {
-    "Status": "APU1",
-    "Descripcion": "No Cont. 1",
-    "Dato": 81
-  },
-  {
-    "Status": "APU1",
-    "Descripcion": "Tot 1",
-    "Dato": 101
-  },
-  {
-    "Status": "APU2",
-    "Descripcion": "Si Cont. 2",
-    "Dato": 46
-  },
-  {
-    "Status": "APU2",
-    "Descripcion": "No Cont. 2",
-    "Dato": 57
-  },
-  {
-    "Status": "APU2",
-    "Descripcion": "Tot 2",
-    "Dato": 103
-  },
-  {
-    "Status": "APU3",
-    "Descripcion": "Si Cont. 3",
-    "Dato": 29
-  },
-  {
-    "Status": "APU3",
-    "Descripcion": "No Cont. 3",
-    "Dato": 76
-  },
-  {
-    "Status": "APU3",
-    "Descripcion": "Tot 3",
-    "Dato": 105
-  }
+ {
+  "Status": "Global",
+  "Descripcion": "Cumplimiento",
+  "Dato": 0.2037037037037037
+ },
+ {
+  "Status": "Global",
+  "Descripcion": "Incumplimiento",
+  "Dato": 0.7962962962962963
+ },
+ {
+  "Status": "Global",
+  "Descripcion": "C.Diario mayor",
+  "Dato": "AFC"
+ },
+ {
+  "Status": "Global",
+  "Descripcion": "C.Diario menor",
+  "Dato": "BLW"
+ },
+ {
+  "Status": "APU1",
+  "Descripcion": "Si Cont. 1",
+  "Dato": 11
+ },
+ {
+  "Status": "APU1",
+  "Descripcion": "No Cont. 1",
+  "Dato": 61
+ },
+ {
+  "Status": "APU1",
+  "Descripcion": "Tot 1",
+  "Dato": 72
+ },
+ {
+  "Status": "APU2",
+  "Descripcion": "Si Cont. 2",
+  "Dato": 22
+ },
+ {
+  "Status": "APU2",
+  "Descripcion": "No Cont. 2",
+  "Dato": 49
+ },
+ {
+  "Status": "APU2",
+  "Descripcion": "Tot 2",
+  "Dato": 71
+ },
+ {
+  "Status": "APU3",
+  "Descripcion": "Si Cont. 3",
+  "Dato": 11
+ },
+ {
+  "Status": "APU3",
+  "Descripcion": "No Cont. 3",
+  "Dato": 62
+ },
+ {
+  "Status": "APU3",
+  "Descripcion": "Tot 3",
+  "Dato": 73
+ }
 ]
