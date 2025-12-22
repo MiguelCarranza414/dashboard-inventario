@@ -1,4 +1,9 @@
 const KPI_JSON_URL = "https://raw.githubusercontent.com/MiguelCarranza414/dashboard-inventario/refs/heads/main/KPI.json";
+const APU_DETAIL_FILES = {
+  APU1: 'apu1.JSON',
+  APU2: 'apu2.json',
+  APU3: 'apu3.json'
+};
 const selectors = {
   compliance: document.getElementById('global-compliance'),
   noncompliance: document.getElementById('global-noncompliance'),
@@ -30,6 +35,17 @@ async function fetchKPI() {
   if (!Array.isArray(data)) throw new Error('El JSON no tiene el formato esperado');
   return data;
 }
+async function fetchAPUDetails() {
+  const entries = await Promise.all(
+    Object.entries(APU_DETAIL_FILES).map(async ([apu, url]) => {
+      const response = await fetch(url, { cache: 'no-store' });
+      if (!response.ok) throw new Error(`No se pudo cargar el detalle de ${apu}`);
+      const data = await response.json();
+      return [apu, Array.isArray(data) ? data : []];
+    })
+  );
+  return Object.fromEntries(entries);
+}
 function groupByStatus(data) {
   return data.reduce((acc, item) => {
     const key = item.Status || 'Desconocido';
@@ -53,7 +69,7 @@ function renderGlobal(globalData) {
   selectors.codigoMenor.textContent = codigoMenor?.Dato ?? '--';
   selectors.lastUpdated.textContent = `Actualizado: ${formatDate()}`;
 }
-function renderAPU(apus) {
+function renderAPU(apus, apuDetails) {
   selectors.apuGrid.innerHTML = '';
   let totalGlobal = 0;
   let mejor = { status: null, rate: -Infinity };
@@ -68,6 +84,41 @@ function renderAPU(apus) {
     if (cumplimiento > mejor.rate) mejor = { status, rate: cumplimiento };
     if (cumplimiento < peor.rate) peor = { status, rate: cumplimiento };
     const complianceDeg = cumplimiento * 360;
+    const detalles = apuDetails?.[status] ?? [];
+    const lineas = detalles.filter((linea) => linea.Linea?.toLowerCase() !== 'total');
+    const lineasHTML = lineas.length
+      ? lineas.map((linea) => {
+        const si = Number(linea['Si Cumplio'] ?? 0);
+        const no = Number(linea['No cumplio'] ?? 0);
+        const sin = Number(linea['Sin Conteo'] ?? 0);
+        const totalLinea = si + no + sin;
+        const siPct = totalLinea ? (si / totalLinea) * 100 : 0;
+        const noPct = totalLinea ? (no / totalLinea) * 100 : 0;
+        const sinPct = totalLinea ? (sin / totalLinea) * 100 : 0;
+        return `
+          <div class="apu-line">
+            <div class="apu-line-header">
+              <span>${linea.Linea}</span>
+              <span class="muted">Total ${totalLinea}</span>
+            </div>
+            <div class="apu-line-bars">
+              <div>
+                <div class="bar-label"><span>Si cumplió</span><span>${si}</span></div>
+                <div class="bar compact"><div class="bar-fill" style="width: ${siPct.toFixed(0)}%"></div></div>
+              </div>
+              <div>
+                <div class="bar-label"><span>No cumplió</span><span>${no}</span></div>
+                <div class="bar compact"><div class="bar-fill danger" style="width: ${noPct.toFixed(0)}%"></div></div>
+              </div>
+              <div>
+                <div class="bar-label"><span>Sin conteo</span><span>${sin}</span></div>
+                <div class="bar compact"><div class="bar-fill neutral" style="width: ${sinPct.toFixed(0)}%"></div></div>
+              </div>
+            </div>
+          </div>
+        `;
+      }).join('')
+      : '<div class="apu-line empty">Sin detalle disponible.</div>';
     const card = document.createElement('div');
     card.className = 'card';
     card.innerHTML = `
@@ -98,6 +149,10 @@ function renderAPU(apus) {
           <div class="bar-label muted">Total casos: ${total}</div>
         </div>
       </div>
+      <div class="apu-lines">
+        <div class="apu-lines-title">Detalle por línea</div>
+        ${lineasHTML}
+      </div>
     `;
     selectors.apuGrid.appendChild(card);
   });
@@ -115,17 +170,17 @@ function renderNarrative(mejor, peor) {
     Revisa la distribución de los conteos para equilibrar el desempeño y prioriza acciones correctivas en las lineas con baja cobertura.
   `;
 }
-function renderDashboard(data) {
+function renderDashboard(data, apuDetails) {
   const grouped = groupByStatus(data);
   if (grouped.Global) renderGlobal(grouped.Global);
-  renderAPU(grouped);
+  renderAPU(grouped, apuDetails);
 }
 async function init() {
   selectors.narrative.textContent = 'Cargando datos...';
   selectors.refreshBtn.disabled = true;
   try {
-    const data = await fetchKPI();
-    renderDashboard(data);
+    const [data, apuDetails] = await Promise.all([fetchKPI(), fetchAPUDetails()]);
+    renderDashboard(data, apuDetails);
   } catch (error) {
     showToast(error.message);
     selectors.narrative.textContent = 'No pudimos cargar la información. Intenta nuevamente en unos segundos.';
