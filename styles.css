@@ -216,6 +216,8 @@ main { margin-top: 24px; display: flex; flex-direction: column; gap: 18px; }
   position: relative;
 }
 
+.bar.compact { height: 8px; }
+
 .bar-fill {
   height: 100%;
   background: linear-gradient(90deg, var(--secondary), #a78bfa);
@@ -224,6 +226,7 @@ main { margin-top: 24px; display: flex; flex-direction: column; gap: 18px; }
 }
 
 .bar-fill.danger { background: linear-gradient(90deg, var(--danger-strong), var(--danger)); }
+.bar-fill.neutral { background: linear-gradient(90deg, #94a3b8, #cbd5f5); }
 
 .tag { display: inline-block; padding: 6px 10px; border-radius: 8px; font-weight: 700; font-size: 12px; }
 .tag.success { background: rgba(16, 185, 129, 0.15); color: var(--primary); }
@@ -232,6 +235,49 @@ main { margin-top: 24px; display: flex; flex-direction: column; gap: 18px; }
 .narrative { font-size: 15px; line-height: 1.6; color: var(--text); background: radial-gradient(circle at 20% 20%, rgba(16, 185, 129, 0.06), transparent 25%), var(--surface); }
 
 .muted { color: var(--muted); }
+
+.apu-lines {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.apu-lines-title {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.apu-line {
+  padding: 12px;
+  border-radius: 12px;
+  background: rgba(15, 23, 42, 0.4);
+  border: 1px solid rgba(148, 163, 184, 0.15);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.apu-line.empty {
+  color: var(--muted);
+  text-align: center;
+  font-size: 13px;
+}
+
+.apu-line-header {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+}
+
+.apu-line-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
 
 .toast {
   position: fixed;
