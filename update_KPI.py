@@ -1,6 +1,7 @@
 from openpyxl import load_workbook
 import json
 from pathlib import Path
+import subprocess
 
 excel_path = r"C:\Users\Miguel.Carranza\OneDrive - Vertiv Co\Analisis Diciembre.xlsx"
 
@@ -37,3 +38,31 @@ for filename, (sheet, cell) in READS.items():
         json.dump(value, f, ensure_ascii=False, indent=2)
 
     print(f"✅ {filename}: {sheet}!{cell} -> OK")
+#Github
+REPO = Path(r"C:\KPI")   # carpeta donde está el .git
+MENSAJE = "Auto update: KPI Conteos Ciclicos"
+
+def run(cmd: list[str]) -> None:
+    r = subprocess.run(cmd, cwd=REPO, text=True, capture_output=True)
+    if r.returncode != 0:
+        raise RuntimeError(f"Error ejecutando: {' '.join(cmd)}\n{r.stderr}")
+    if r.stdout.strip():
+        print(r.stdout.strip())
+
+
+# 1) (opcional) ver estado
+run(["git", "status"])
+
+# 2) add (todo) o solo un archivo
+# run(["git", "add", "."])
+run(["git", "add", "."])  # pon la ruta relativa dentro del repo
+
+# 3) commit (si hay cambios)
+# Nota: git commit falla si "no hay nada que commitear", lo manejamos:
+r = subprocess.run(["git", "diff", "--cached", "--quiet"], cwd=REPO)
+if r.returncode == 0:
+    print("ℹ️ No hay cambios en stage para commitear.")
+else:
+    run(["git", "commit", "-m", MENSAJE])
+    run(["git", "push"])
+    print("✅ add/commit/push completado.")
