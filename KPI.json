@@ -2,17 +2,17 @@
   {
     "Status": "Global",
     "Descripcion": "Cumplimiento",
-    "Dato": 0.221875
+    "Dato": 0.5555555555555556
   },
   {
     "Status": "Global",
     "Descripcion": "Incumplimiento",
-    "Dato": 0.778125
+    "Dato": 0.4444444444444444
   },
   {
     "Status": "Global",
     "Descripcion": "C.Diario mayor",
-    "Dato": "KITS"
+    "Dato": "CON"
   },
   {
     "Status": "Global",
@@ -22,46 +22,46 @@
   {
     "Status": "APU1",
     "Descripcion": "Si Cont. 1",
-    "Dato": 16
+    "Dato": 3
   },
   {
     "Status": "APU1",
     "Descripcion": "No Cont. 1",
-    "Dato": 89
+    "Dato": 3
   },
   {
     "Status": "APU1",
     "Descripcion": "Tot 1",
-    "Dato": 105
+    "Dato": 6
   },
   {
     "Status": "APU2",
     "Descripcion": "Si Cont. 2",
-    "Dato": 37
+    "Dato": 4
   },
   {
     "Status": "APU2",
     "Descripcion": "No Cont. 2",
-    "Dato": 69
+    "Dato": 2
   },
   {
     "Status": "APU2",
     "Descripcion": "Tot 2",
-    "Dato": 106
+    "Dato": 6
   },
   {
     "Status": "APU3",
     "Descripcion": "Si Cont. 3",
-    "Dato": 18
+    "Dato": 3
   },
   {
     "Status": "APU3",
     "Descripcion": "No Cont. 3",
-    "Dato": 91
+    "Dato": 3
   },
   {
     "Status": "APU3",
     "Descripcion": "Tot 3",
-    "Dato": 109
+    "Dato": 6
   }
 ]
