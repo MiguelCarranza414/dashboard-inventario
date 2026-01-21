@@ -2,12 +2,12 @@
   {
     "Status": "Global",
     "Descripcion": "Cumplimiento",
-    "Dato": 0.5757575757575758
+    "Dato": 0.6060606060606061
   },
   {
     "Status": "Global",
     "Descripcion": "Incumplimiento",
-    "Dato": 0.42424242424242425
+    "Dato": 0.3939393939393939
   },
   {
     "Status": "Global",
@@ -22,12 +22,12 @@
   {
     "Status": "APU1",
     "Descripcion": "Si Cont. 1",
-    "Dato": 5
+    "Dato": 6
   },
   {
     "Status": "APU1",
     "Descripcion": "No Cont. 1",
-    "Dato": 6
+    "Dato": 5
   },
   {
     "Status": "APU1",

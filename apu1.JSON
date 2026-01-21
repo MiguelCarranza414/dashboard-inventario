@@ -19,8 +19,8 @@
   },
   {
     "Linea": "DP",
-    "No cumplio": 1,
-    "Si Cumplio": 1,
+    "No cumplio": 0,
+    "Si Cumplio": 2,
     "Sin Conteo": 12
   },
   {
@@ -37,8 +37,8 @@
   },
   {
     "Linea": "Total",
-    "No cumplio": 6,
-    "Si Cumplio": 5,
+    "No cumplio": 5,
+    "Si Cumplio": 6,
     "Sin Conteo": 73
   }
 ]
