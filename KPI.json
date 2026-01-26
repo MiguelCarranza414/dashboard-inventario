@@ -2,12 +2,12 @@
   {
     "Status": "Global",
     "Descripcion": "Cumplimiento",
-    "Dato": 0.5365853658536586
+    "Dato": 0.5609756097560976
   },
   {
     "Status": "Global",
     "Descripcion": "Incumplimiento",
-    "Dato": 0.4634146341463415
+    "Dato": 0.43902439024390244
   },
   {
     "Status": "Global",
@@ -37,12 +37,12 @@
   {
     "Status": "APU2",
     "Descripcion": "Si Cont. 2",
-    "Dato": 19
+    "Dato": 20
   },
   {
     "Status": "APU2",
     "Descripcion": "No Cont. 2",
-    "Dato": 8
+    "Dato": 7
   },
   {
     "Status": "APU2",
@@ -52,12 +52,12 @@
   {
     "Status": "APU3",
     "Descripcion": "Si Cont. 3",
-    "Dato": 13
+    "Dato": 14
   },
   {
     "Status": "APU3",
     "Descripcion": "No Cont. 3",
-    "Dato": 14
+    "Dato": 13
   },
   {
     "Status": "APU3",

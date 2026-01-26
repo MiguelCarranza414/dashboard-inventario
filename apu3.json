@@ -1,8 +1,8 @@
 [
   {
     "Linea": "COILS",
-    "No cumplio": 1,
-    "Si Cumplio": 3,
+    "No cumplio": 0,
+    "Si Cumplio": 4,
     "Sin Conteo": 13
   },
   {
@@ -43,8 +43,8 @@
   },
   {
     "Linea": "Total",
-    "No cumplio": 14,
-    "Si Cumplio": 13,
+    "No cumplio": 13,
+    "Si Cumplio": 14,
     "Sin Conteo": 92
   }
 ]

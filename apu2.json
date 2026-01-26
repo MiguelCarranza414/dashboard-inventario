@@ -13,8 +13,8 @@
   },
   {
     "Linea": "KITS",
-    "No cumplio": 3,
-    "Si Cumplio": 2,
+    "No cumplio": 2,
+    "Si Cumplio": 3,
     "Sin Conteo": 12
   },
   {
@@ -37,8 +37,8 @@
   },
   {
     "Linea": "Total",
-    "No cumplio": 8,
-    "Si Cumplio": 19,
+    "No cumplio": 7,
+    "Si Cumplio": 20,
     "Sin Conteo": 75
   }
 ]
