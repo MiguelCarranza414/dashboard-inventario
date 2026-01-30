@@ -96,11 +96,11 @@ function renderAPU(apus, apuDetails) {
         const noPct = totalLinea ? (no / totalLinea) * 100 : 0;
         const sinPct = totalLinea ? (sin / totalLinea) * 100 : 0;
         return `
-          <div class="apu-line">
-            <div class="apu-line-header">
+          <details class="apu-line">
+            <summary class="apu-line-header">
               <span>${linea.Linea}</span>
               <span class="muted">Total ${totalLinea}</span>
-            </div>
+            </summary>
             <div class="apu-line-bars">
               <div>
                 <div class="bar-label"><span>Si cumplió</span><span>${si}</span></div>
@@ -115,7 +115,7 @@ function renderAPU(apus, apuDetails) {
                 <div class="bar compact"><div class="bar-fill neutral" style="width: ${sinPct.toFixed(0)}%"></div></div>
               </div>
             </div>
-          </div>
+          </details>
         `;
       }).join('')
       : '<div class="apu-line empty">Sin detalle disponible.</div>';
@@ -149,10 +149,10 @@ function renderAPU(apus, apuDetails) {
           <div class="bar-label muted">Total casos: ${total}</div>
         </div>
       </div>
-      <div class="apu-lines">
-        <div class="apu-lines-title">Detalle por línea</div>
+      <details class="apu-lines">
+        <summary class="apu-lines-title">Detalle por línea</summary>
         ${lineasHTML}
-      </div>
+      </details>
     `;
     selectors.apuGrid.appendChild(card);
   });
