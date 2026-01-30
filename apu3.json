@@ -19,21 +19,21 @@
   },
   {
     "Linea": "SM",
-    "No cumplio": 1,
+    "No cumplio": 0,
     "Si Cumplio": 0,
-    "Sin Conteo": 21
+    "Sin Conteo": 22
   },
   {
     "Linea": "XDM",
-    "No cumplio": 1,
-    "Si Cumplio": 9,
+    "No cumplio": 0,
+    "Si Cumplio": 10,
     "Sin Conteo": 12
   },
   {
     "Linea": "XDU",
-    "No cumplio": 1,
+    "No cumplio": 0,
     "Si Cumplio": 6,
-    "Sin Conteo": 15
+    "Sin Conteo": 16
   },
   {
     "Linea": "MC",
@@ -43,8 +43,8 @@
   },
   {
     "Linea": "Total",
-    "No cumplio": 28,
-    "Si Cumplio": 26,
-    "Sin Conteo": 100
+    "No cumplio": 25,
+    "Si Cumplio": 27,
+    "Sin Conteo": 102
   }
 ]
