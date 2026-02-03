@@ -99,7 +99,7 @@ function renderAPU(apus, apuDetails) {
           <details class="apu-line">
             <summary class="apu-line-header">
               <span>${linea.Linea}</span>
-              <span class="muted">Total ${totalLinea}</span>
+              <span class="muted">Total ${totalLinea} days </span>
             </summary>
             <div class="apu-line-bars">
               <div>
