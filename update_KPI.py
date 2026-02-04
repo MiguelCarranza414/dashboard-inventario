@@ -3,7 +3,7 @@ import json
 from pathlib import Path
 import subprocess
 
-excel_path = r"C:\Users\Miguel.Carranza\OneDrive - Vertiv Co\Analisis Febrero.xlsx"
+excel_path = r"C:\Users\Miguel.Carranza\OneDrive - Vertiv Co\Analisis Enero.xlsx"
 
 # Dónde guardar los json (carpeta del script)
 out_dir = Path(__file__).resolve().parent
