@@ -23,21 +23,50 @@ const formatDate = () => {
   const now = new Date();
   return new Intl.DateTimeFormat('es-ES', { dateStyle: 'medium', timeStyle: 'short' }).format(now);
 };
+// ===============================================
+// CONFIGURACIÓN DE MESES HISTÓRICOS
+// ===============================================
+const BASE_REPO_URL = "https://raw.githubusercontent.com/MiguelCarranza414/dashboard-inventario/refs/heads/main";
+
+const AVAILABLE_MONTHS = [
+  { value: "current", label: "Mes Actual (En Vivo)", path: "" },
+  { value: "2026-01", label: "Enero 2026", path: "historico/2026-01" },
+  //{ value: "2025-12", label: "Diciembre 2025", path: "historico/2025-12" },
+  //{ value: "2025-11", label: "Noviembre 2025", path: "historico/2025-11" },
+];
+
+let currentMonthIndex = 0; // Empieza en mes actual
 function showToast(message) {
   selectors.toast.textContent = message;
   selectors.toast.hidden = false;
   setTimeout(() => { selectors.toast.hidden = true; }, 3800);
 }
+// ===============================================
+// FUNCIONES DE CARGA ACTUALIZADAS CON HISTÓRICO
+// ===============================================
+
+function getCurrentMonthPath() {
+  const month = AVAILABLE_MONTHS[currentMonthIndex];
+  return month.path ? `${BASE_REPO_URL}/${month.path}` : BASE_REPO_URL;
+}
+
 async function fetchKPI() {
-  const response = await fetch(KPI_JSON_URL, { cache: 'no-store' });
+  const basePath = getCurrentMonthPath();
+  const url = `${basePath}/KPI.json`;
+  
+  const response = await fetch(url, { cache: 'no-store' });
   if (!response.ok) throw new Error('No se pudieron obtener los datos');
   const data = await response.json();
   if (!Array.isArray(data)) throw new Error('El JSON no tiene el formato esperado');
   return data;
 }
+
 async function fetchAPUDetails() {
+  const basePath = getCurrentMonthPath();
+  
   const entries = await Promise.all(
-    Object.entries(APU_DETAIL_FILES).map(async ([apu, url]) => {
+    Object.entries(APU_DETAIL_FILES).map(async ([apu, filename]) => {
+      const url = `${basePath}/${filename}`;
       const response = await fetch(url, { cache: 'no-store' });
       if (!response.ok) throw new Error(`No se pudo cargar el detalle de ${apu}`);
       const data = await response.json();
@@ -175,6 +204,50 @@ function renderDashboard(data, apuDetails) {
   if (grouped.Global) renderGlobal(grouped.Global);
   renderAPU(grouped, apuDetails);
 }
+// ===============================================
+// MANEJADORES DEL SELECTOR DE MES
+// ===============================================
+
+function updateMonthSelector() {
+  const select = document.getElementById('month-select');
+  const prevBtn = document.getElementById('month-prev');
+  const nextBtn = document.getElementById('month-next');
+  
+  // Actualizar dropdown
+  select.value = AVAILABLE_MONTHS[currentMonthIndex].value;
+  
+  // Habilitar/deshabilitar botones
+  prevBtn.disabled = currentMonthIndex === AVAILABLE_MONTHS.length - 1;
+  nextBtn.disabled = currentMonthIndex === 0;
+}
+
+document.getElementById('month-select').addEventListener('change', (e) => {
+  currentMonthIndex = AVAILABLE_MONTHS.findIndex(m => m.value === e.target.value);
+  updateMonthSelector();
+  init(); // Recargar dashboard con nuevo mes
+});
+
+document.getElementById('month-prev').addEventListener('click', () => {
+  if (currentMonthIndex < AVAILABLE_MONTHS.length - 1) {
+    currentMonthIndex++;
+    updateMonthSelector();
+    init();
+  }
+});
+
+document.getElementById('month-next').addEventListener('click', () => {
+  if (currentMonthIndex > 0) {
+    currentMonthIndex--;
+    updateMonthSelector();
+    init();
+  }
+});
+
+// Inicializar selector
+window.addEventListener('DOMContentLoaded', () => {
+  updateMonthSelector();
+  init();
+});
 async function init() {
   selectors.narrative.textContent = 'Cargando datos...';
   selectors.refreshBtn.disabled = true;
@@ -190,4 +263,3 @@ async function init() {
   }
 }
 selectors.refreshBtn.addEventListener('click', init);
-window.addEventListener('DOMContentLoaded', init);
