@@ -31,8 +31,8 @@ const BASE_REPO_URL = "https://raw.githubusercontent.com/MiguelCarranza414/dashb
 const AVAILABLE_MONTHS = [
   { value: "current", label: "Mes Actual (En Vivo)", path: "" },
   { value: "2026-01", label: "Enero 2026", path: "historico/2026-01" },
-  //{ value: "2025-12", label: "Diciembre 2025", path: "historico/2025-12" },
-  //{ value: "2025-11", label: "Noviembre 2025", path: "historico/2025-11" },
+  { value: "2025-12", label: "Diciembre 2025", path: "historico/2025-12" },
+  { value: "2025-11", label: "Noviembre 2025", path: "historico/2025-11" },
 ];
 
 let currentMonthIndex = 0; // Empieza en mes actual

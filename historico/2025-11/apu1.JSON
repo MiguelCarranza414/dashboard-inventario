@@ -1,0 +1,44 @@
+[
+  {
+    "Column1": "BLW",
+    "No cumplio": 17,
+    "Si Cumplio": 1,
+    "Sin Conteo": 1
+  },
+  {
+    "Column1": "CON",
+    "No cumplio": 18,
+    "Si Cumplio": 0,
+    "Sin Conteo": 1
+  },
+  {
+    "Column1": "CR",
+    "No cumplio": 16,
+    "Si Cumplio": 1,
+    "Sin Conteo": 2
+  },
+  {
+    "Column1": "DP",
+    "No cumplio": 11,
+    "Si Cumplio": 7,
+    "Sin Conteo": 1
+  },
+  {
+    "Column1": "HRS",
+    "No cumplio": 9,
+    "Si Cumplio": 4,
+    "Sin Conteo": 6
+  },
+  {
+    "Column1": "SKID",
+    "No cumplio": 10,
+    "Si Cumplio": 7,
+    "Sin Conteo": 2
+  },
+  {
+    "Column1": "Total",
+    "No cumplio": 81,
+    "Si Cumplio": 20,
+    "Sin Conteo": 13
+  }
+]
