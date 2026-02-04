@@ -1,0 +1,44 @@
+[
+  {
+    "Linea": "AFC",
+    "No cumplio": 0,
+    "Si Cumplio": 10,
+    "Sin Conteo": 12
+  },
+  {
+    "Linea": "DA",
+    "No cumplio": 0,
+    "Si Cumplio": 10,
+    "Sin Conteo": 12
+  },
+  {
+    "Linea": "KITS",
+    "No cumplio": 3,
+    "Si Cumplio": 6,
+    "Sin Conteo": 13
+  },
+  {
+    "Linea": "PLENUM",
+    "No cumplio": 0,
+    "Si Cumplio": 10,
+    "Sin Conteo": 12
+  },
+  {
+    "Linea": "PRE",
+    "No cumplio": 7,
+    "Si Cumplio": 3,
+    "Sin Conteo": 12
+  },
+  {
+    "Linea": "XDU100",
+    "No cumplio": 1,
+    "Si Cumplio": 1,
+    "Sin Conteo": 20
+  },
+  {
+    "Linea": "Total",
+    "No cumplio": 11,
+    "Si Cumplio": 40,
+    "Sin Conteo": 81
+  }
+]
