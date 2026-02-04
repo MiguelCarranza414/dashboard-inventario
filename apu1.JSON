@@ -1,44 +1,44 @@
 [
   {
     "Linea": "BLW",
-    "No cumplio": 1,
+    "No cumplio": 19,
     "Si Cumplio": 0,
-    "Sin Conteo": 1
+    "Sin Conteo": 4
   },
   {
     "Linea": "CON",
-    "No cumplio": 1,
-    "Si Cumplio": 0,
-    "Sin Conteo": 1
+    "No cumplio": 15,
+    "Si Cumplio": 4,
+    "Sin Conteo": 4
   },
   {
     "Linea": "CR",
-    "No cumplio": 1,
+    "No cumplio": 17,
     "Si Cumplio": 0,
-    "Sin Conteo": 1
+    "Sin Conteo": 6
   },
   {
     "Linea": "DP",
-    "No cumplio": 0,
-    "Si Cumplio": 1,
-    "Sin Conteo": 1
+    "No cumplio": 14,
+    "Si Cumplio": 5,
+    "Sin Conteo": 4
   },
   {
     "Linea": "HRS",
-    "No cumplio": 1,
-    "Si Cumplio": 0,
-    "Sin Conteo": 1
+    "No cumplio": 10,
+    "Si Cumplio": 2,
+    "Sin Conteo": 11
   },
   {
     "Linea": "SKID",
-    "No cumplio": 1,
-    "Si Cumplio": 0,
-    "Sin Conteo": 1
+    "No cumplio": 14,
+    "Si Cumplio": 5,
+    "Sin Conteo": 4
   },
   {
     "Linea": "Total",
-    "No cumplio": 5,
-    "Si Cumplio": 1,
-    "Sin Conteo": 6
+    "No cumplio": 89,
+    "Si Cumplio": 16,
+    "Sin Conteo": 33
   }
 ]
