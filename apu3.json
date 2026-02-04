@@ -1,1 +1,50 @@
-null
+[
+  {
+    "Column1": "COILS",
+    "No cumplio": 10,
+    "Si Cumplio": 3,
+    "Sin Conteo": 6
+  },
+  {
+    "Column1": "EP",
+    "No cumplio": 14,
+    "Si Cumplio": 4,
+    "Sin Conteo": 1
+  },
+  {
+    "Column1": "PIPING",
+    "No cumplio": 12,
+    "Si Cumplio": 0,
+    "Sin Conteo": 7
+  },
+  {
+    "Column1": "SM",
+    "No cumplio": 8,
+    "Si Cumplio": 0,
+    "Sin Conteo": 11
+  },
+  {
+    "Column1": "XDM",
+    "No cumplio": 12,
+    "Si Cumplio": 6,
+    "Sin Conteo": 1
+  },
+  {
+    "Column1": "XDU",
+    "No cumplio": 2,
+    "Si Cumplio": 16,
+    "Sin Conteo": 1
+  },
+  {
+    "Column1": "MC",
+    "No cumplio": 18,
+    "Si Cumplio": 0,
+    "Sin Conteo": 1
+  },
+  {
+    "Column1": "Total",
+    "No cumplio": 76,
+    "Si Cumplio": 29,
+    "Sin Conteo": 28
+  }
+]
