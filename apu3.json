@@ -2,18 +2,18 @@
   {
     "Linea": "COILS",
     "No cumplio": 2,
-    "Si Cumplio": 5,
+    "Si Cumplio": 6,
     "Sin Conteo": 3
   },
   {
     "Linea": "EP",
-    "No cumplio": 5,
+    "No cumplio": 6,
     "Si Cumplio": 2,
     "Sin Conteo": 3
   },
   {
     "Linea": "PIPING",
-    "No cumplio": 5,
+    "No cumplio": 6,
     "Si Cumplio": 2,
     "Sin Conteo": 3
   },
@@ -21,30 +21,30 @@
     "Linea": "SM",
     "No cumplio": 2,
     "Si Cumplio": 0,
-    "Sin Conteo": 8
+    "Sin Conteo": 9
   },
   {
     "Linea": "XDM",
-    "No cumplio": 2,
+    "No cumplio": 3,
     "Si Cumplio": 5,
     "Sin Conteo": 3
   },
   {
     "Linea": "XDU",
     "No cumplio": 1,
-    "Si Cumplio": 3,
+    "Si Cumplio": 4,
     "Sin Conteo": 6
   },
   {
     "Linea": "MC",
-    "No cumplio": 2,
+    "No cumplio": 3,
     "Si Cumplio": 3,
     "Sin Conteo": 5
   },
   {
     "Linea": "Total",
-    "No cumplio": 19,
-    "Si Cumplio": 20,
-    "Sin Conteo": 31
+    "No cumplio": 23,
+    "Si Cumplio": 22,
+    "Sin Conteo": 32
   }
 ]
