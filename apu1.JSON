@@ -3,23 +3,23 @@
     "Linea": "BLW",
     "No cumplio": 6,
     "Si Cumplio": 2,
-    "Sin Conteo": 3
+    "Sin Conteo": 4
   },
   {
     "Linea": "CON",
     "No cumplio": 6,
-    "Si Cumplio": 2,
+    "Si Cumplio": 3,
     "Sin Conteo": 3
   },
   {
     "Linea": "CR",
-    "No cumplio": 3,
+    "No cumplio": 4,
     "Si Cumplio": 4,
     "Sin Conteo": 4
   },
   {
     "Linea": "DP",
-    "No cumplio": 3,
+    "No cumplio": 4,
     "Si Cumplio": 5,
     "Sin Conteo": 3
   },
@@ -27,18 +27,18 @@
     "Linea": "HRS",
     "No cumplio": 1,
     "Si Cumplio": 3,
-    "Sin Conteo": 7
+    "Sin Conteo": 8
   },
   {
     "Linea": "SKID",
     "No cumplio": 1,
-    "Si Cumplio": 6,
+    "Si Cumplio": 7,
     "Sin Conteo": 4
   },
   {
     "Linea": "Total",
-    "No cumplio": 20,
-    "Si Cumplio": 22,
-    "Sin Conteo": 24
+    "No cumplio": 22,
+    "Si Cumplio": 24,
+    "Sin Conteo": 26
   }
 ]
