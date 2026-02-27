@@ -10,9 +10,9 @@ out_dir = Path(__file__).resolve().parent
 
 READS = {
     "KPI.json":  ("JSON", "A16"),
-    "apu1.json": ("APU1", "B21"),
+    "apu1.json": ("APU1", "B28"),
     "apu2.json": ("APU2", "B21"),
-    "apu3.json": ("APU3", "B22"),
+    #"apu3.json": ("APU3", "B22"),
 }
 
 def maybe_parse_json(value):
@@ -39,7 +39,7 @@ for filename, (sheet, cell) in READS.items():
 
     print(f"✅ {filename}: {sheet}!{cell} -> OK")
 #Github
-REPO = Path(r"C:\KPI")
+REPO = Path(r"C:\dashboard-inventario")
 MENSAJE = "Auto update: KPI Conteos Ciclicos"
 
 def run(cmd: list[str]) -> None:

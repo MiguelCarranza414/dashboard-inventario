@@ -1,44 +1,44 @@
 [
   {
     "Linea": "AFC",
-    "No cumplio": 8,
+    "No cumplio": 13,
     "Si Cumplio": 3,
     "Sin Conteo": 3
   },
   {
     "Linea": "DA",
-    "No cumplio": 6,
-    "Si Cumplio": 5,
+    "No cumplio": 8,
+    "Si Cumplio": 8,
     "Sin Conteo": 3
   },
   {
     "Linea": "KITS",
-    "No cumplio": 9,
+    "No cumplio": 14,
     "Si Cumplio": 0,
     "Sin Conteo": 5
   },
   {
     "Linea": "PLENUM",
     "No cumplio": 5,
-    "Si Cumplio": 5,
+    "Si Cumplio": 10,
     "Sin Conteo": 4
   },
   {
     "Linea": "PRE",
-    "No cumplio": 5,
+    "No cumplio": 9,
     "Si Cumplio": 5,
-    "Sin Conteo": 4
+    "Sin Conteo": 5
   },
   {
     "Linea": "XDU100",
-    "No cumplio": 5,
+    "No cumplio": 9,
     "Si Cumplio": 3,
-    "Sin Conteo": 6
+    "Sin Conteo": 7
   },
   {
     "Linea": "Total",
-    "No cumplio": 38,
-    "Si Cumplio": 21,
-    "Sin Conteo": 25
+    "No cumplio": 58,
+    "Si Cumplio": 29,
+    "Sin Conteo": 27
   }
 ]
