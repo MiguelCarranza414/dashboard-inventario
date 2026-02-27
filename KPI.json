@@ -52,16 +52,16 @@
   {
     "Status": "APU3",
     "Descripcion": "Si Cont. 3",
-    "Dato": NaN
+    "Dato": 29
   },
   {
     "Status": "APU3",
     "Descripcion": "No Cont. 3",
-    "Dato": NaN
+    "Dato": 55
   },
   {
     "Status": "APU3",
     "Descripcion": "Tot 3",
-    "Dato": NaN
+    "Dato": 84
   }
 ]
