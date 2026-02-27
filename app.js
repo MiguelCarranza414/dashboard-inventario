@@ -1,8 +1,7 @@
 const KPI_JSON_URL = "https://raw.githubusercontent.com/MiguelCarranza414/dashboard-inventario/refs/heads/main/KPI.json";
 const APU_DETAIL_FILES = {
   APU1: 'apu1.JSON',
-  APU2: 'apu2.json',
-  APU3: 'apu3.json'
+  APU2: 'apu2.json'
 };
 const selectors = {
   compliance: document.getElementById('global-compliance'),
