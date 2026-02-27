@@ -72,6 +72,10 @@ async function fetchAPUDetails() {
       return [apu, Array.isArray(data) ? data : []];
     })
   );
+// ✅ Si falta el archivo (404) o cualquier error, ignóralo
+  if (!response.ok) return [apu, []];
+
+  const data = await response.json();
   return Object.fromEntries(entries);
 }
 function groupByStatus(data) {
