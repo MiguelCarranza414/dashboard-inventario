@@ -48,20 +48,5 @@
     "Status": "APU2",
     "Descripcion": "Tot 2",
     "Dato": 87
-  },
-  {
-    "Status": "APU3",
-    "Descripcion": "Si Cont. 3",
-    "Dato": 29
-  },
-  {
-    "Status": "APU3",
-    "Descripcion": "No Cont. 3",
-    "Dato": 55
-  },
-  {
-    "Status": "APU3",
-    "Descripcion": "Tot 3",
-    "Dato": 84
   }
 ]
