@@ -10,7 +10,7 @@ out_dir = Path(__file__).resolve().parent
 
 READS = {
     "KPI.json":  ("JSON", "A16"),
-    "apu1.json": ("APU1", "B22"),
+    "apu1.json": ("APU1", "B23"),
     "apu2.json": ("APU2", "B24"),
     #"apu3.json": ("APU3", "B22"),
 }
