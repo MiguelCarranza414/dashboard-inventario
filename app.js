@@ -62,20 +62,23 @@ async function fetchKPI() {
 
 async function fetchAPUDetails() {
   const basePath = getCurrentMonthPath();
-  
+
   const entries = await Promise.all(
     Object.entries(APU_DETAIL_FILES).map(async ([apu, filename]) => {
       const url = `${basePath}/${filename}`;
-      const response = await fetch(url, { cache: 'no-store' });
-      if (!response.ok) throw new Error(`No se pudo cargar el detalle de ${apu}`);
-      const data = await response.json();
-      return [apu, Array.isArray(data) ? data : []];
+
+      try {
+        const response = await fetch(url, { cache: 'no-store' });
+        if (!response.ok) return [apu, []];   // ✅ 404 => ignora
+        const data = await response.json();
+        return [apu, Array.isArray(data) ? data : []];
+      } catch (err) {
+        console.warn(`Detalle ignorado para ${apu}:`, err);
+        return [apu, []];
+      }
     })
   );
-// ✅ Si falta el archivo (404) o cualquier error, ignóralo
-  if (!response.ok) return [apu, []];
 
-  const data = await response.json();
   return Object.fromEntries(entries);
 }
 function groupByStatus(data) {
