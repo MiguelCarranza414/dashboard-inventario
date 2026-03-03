@@ -2,20 +2,12 @@
   {
     "Status": "Global",
     "Descripcion": "Cumplimiento",
-<<<<<<< HEAD
     "Dato": 0.3411764705882353
-=======
-    "Dato": 0.31985294117647056
->>>>>>> 36c95d4ecea752e591ea49434f9ed2172ce15389
   },
   {
     "Status": "Global",
     "Descripcion": "Incumplimiento",
-<<<<<<< HEAD
     "Dato": 0.6588235294117647
-=======
-    "Dato": 0.6801470588235294
->>>>>>> 36c95d4ecea752e591ea49434f9ed2172ce15389
   },
   {
     "Status": "Global",
@@ -35,20 +27,12 @@
   {
     "Status": "APU1",
     "Descripcion": "No Cont. 1",
-<<<<<<< HEAD
     "Dato": 76
-=======
-    "Dato": 93
->>>>>>> 36c95d4ecea752e591ea49434f9ed2172ce15389
   },
   {
     "Status": "APU1",
     "Descripcion": "Tot 1",
-<<<<<<< HEAD
     "Dato": 119
-=======
-    "Dato": 136
->>>>>>> 36c95d4ecea752e591ea49434f9ed2172ce15389
   },
   {
     "Status": "APU2",
