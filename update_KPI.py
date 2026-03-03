@@ -39,7 +39,7 @@ for filename, (sheet, cell) in READS.items():
 
     print(f"✅ {filename}: {sheet}!{cell} -> OK")
 #Github
-REPO = Path(r"C:\dashboard-inventario")
+REPO = Path(r"C:\KPI")
 MENSAJE = "Auto update: KPI Conteos Ciclicos"
 
 def run(cmd: list[str]) -> None:
