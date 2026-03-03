@@ -22,17 +22,17 @@
   {
     "Status": "APU1",
     "Descripcion": "Si Cont. 1",
-    "Dato": NaN
+    "Dato": 43
   },
   {
     "Status": "APU1",
     "Descripcion": "No Cont. 1",
-    "Dato": NaN
+    "Dato": 76
   },
   {
     "Status": "APU1",
     "Descripcion": "Tot 1",
-    "Dato": NaN
+    "Dato": 119
   },
   {
     "Status": "APU2",
