@@ -12,6 +12,15 @@
     "Sin Conteo": 3
   },
   {
+<<<<<<< HEAD
+=======
+    "Linea": "INOX",
+    "No cumplio": 17,
+    "Si Cumplio": 0,
+    "Sin Conteo": 3
+  },
+  {
+>>>>>>> 36c95d4ecea752e591ea49434f9ed2172ce15389
     "Linea": "DP",
     "No cumplio": 8,
     "Si Cumplio": 9,
